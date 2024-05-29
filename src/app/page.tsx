@@ -44,7 +44,7 @@ export default function Web() {
   const emojis = ['😀', '🎉', '🚀', '🌟', '🐱', '🍕'];
 
   return (
-    <div ref={container} className="mx-10 gap-16 flex flex-col pt-24 lg:pt-0">
+    <div ref={container} className="mx-10 gap-16 flex flex-col">
       <section className="relative h-screen flex flex-col px-5">
         <div className="hero_heading_title opacity-0 mx-auto flex max-w-screen-xl h-full items-center justify-center">
           <div className="lg:w-1/2 w-full flex flex-col">
@@ -203,6 +203,7 @@ export default function Web() {
               {Teams.map((team: TeamType) => {
                 return (
                   <Team
+                    key={team.teamNumber}
                     imageUrl={team.imageUrl}
                     teamName={team.teamName}
                     teamNumber={team.teamNumber}

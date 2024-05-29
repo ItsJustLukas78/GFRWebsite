@@ -13,7 +13,7 @@ import { useState } from "react";
 
 
 const navBar = cva(["flex", "items-center", "justify-center", "h-24",
-  "w-full", "fixed", "top-0", "left-0", "right-0", "z-20", "pr-4", "bg-gradient-to-b", "from-black/80", "to-black/1"], {
+  "w-full", "relative", "top-0", "left-0", "", "z-10", "pr-4", "bg-gradient-to-b", "from-black/80", "to-black/1"], {
   variants: {
     intent: {
       primary: ["text-primary"],
@@ -72,7 +72,7 @@ export function NavBar({ intent, className }: NavBarProps) {
         {/*</div>*/}
       </div>
     </div>
-    <div className={`lg:hidden ${hamburgerOpen ? "block" : "hidden"} w-full pb-5 ml-5 sm:text-xl text-lg font-medium bg-[var(--primary-background-color)] text-white absolute top-24 left-0 right-0 z-10`}>
+    <div className={`lg:hidden ${hamburgerOpen ? "block" : "hidden"} w-full pb-5 pl-5 sm:text-xl text-lg font-medium bg-[var(--primary-background-color)] text-white absolute top-24 left-0 right-0 z-10`}>
       <div className="flex flex-col gap-3 p-4">
         <Link href="/#events" className="hover:text-[#DB4A4A]">Events</Link>
         <Link href="/#about" className="hover:text-[#DB4A4A]">About Us</Link>
