@@ -12,6 +12,7 @@ html, body {
     width: 100%;
     padding: 0;
     margin-bottom: 0;
+    overflow-x: hidden;
     overflow-y: auto;
     background-color: var(--primary-background-color);
     scroll-behavior: smooth;
