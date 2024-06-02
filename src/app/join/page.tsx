@@ -15,7 +15,7 @@ import EmojiScene from "@/components/EmojiCanvas";
 
 export default function Web() {
   return (
-    <div className="mx-10 gap-16 flex flex-col pt-24 lg:pt-0">
+    <div className="mx-10 gap-16 flex flex-col pt-24 lg:pt-0 -mt-24">
       <section className="relative h-screen flex flex-col px-5">
         <div className="mx-auto flex max-w-screen-xl h-full items-center justify-center">
           <div className="lg:w-1/2 w-full flex flex-col">

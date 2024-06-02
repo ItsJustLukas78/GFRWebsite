@@ -44,7 +44,7 @@ export default function Web() {
   const emojis = ['😀', '🎉', '🚀', '🌟', '🐱', '🍕'];
 
   return (
-    <div ref={container} className="mx-10 gap-16 flex flex-col">
+    <div ref={container} className="mx-10 gap-16 flex flex-col pt-24 lg:pt-0 -mt-24">
       <section className="relative h-screen flex flex-col px-5">
         <div className="hero_heading_title opacity-0 mx-auto flex max-w-screen-xl h-full items-center justify-center">
           <div className="lg:w-1/2 w-full flex flex-col">

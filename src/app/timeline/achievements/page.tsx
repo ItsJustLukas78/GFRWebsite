@@ -44,7 +44,7 @@ export default function Web() {
   //
 
   return (
-    <div className="mx-10 gap-16 flex flex-col pt-24">
+    <div className="mx-10 gap-16 flex flex-col pt-24 lg:pt-0 -mt-24">
       <div className="my-6">
         {Achievements.map((achievement: AchievementYear) => {
           return (

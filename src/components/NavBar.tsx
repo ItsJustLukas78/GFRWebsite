@@ -87,7 +87,10 @@ export function NavBar({ intent, className }: NavBarProps) {
         <Link href="/#events" className="hover:text-[#DB4A4A]">Events</Link>
         <Link href="/#about" className="hover:text-[#DB4A4A]">About Us</Link>
         <div className="relative flex flex-col items-start">
-          <Link className="hover:text-[#DB4A4A]" href="/#teams">Teams <IoIosArrowDown className="inline" onClick={() => setMobileTeamsExpanded(!mobileTeamsExpanded)} /></Link>
+          <div className="hover:text-[#DB4A4A]">
+            <Link className="hover:text-[#DB4A4A]" href="/#teams">Teams</Link>
+            <IoIosArrowDown className="ml-2 inline" onClick={() => setMobileTeamsExpanded(!mobileTeamsExpanded)} />
+          </div>
           <div className={`${mobileTeamsExpanded ? "max-h-80 visible mt-2" : "max-h-0 invisible"} overflow-hidden flex flex-col gap-3`}>
             {Teams.map((team: TeamType) => {
               return <Link key={team.teamNumber} href={`/team/${team.teamNumber}`} className="hover:text-[#DB4A4A] ml-4">{team.teamNumber}</Link>
@@ -96,7 +99,7 @@ export function NavBar({ intent, className }: NavBarProps) {
         </div>
         <Link href="/join" className="hover:text-[#DB4A4A]">Join Us</Link>
         <div className="relative group">
-          <button className="hover:text-[#DB4A4A]" onClick={() => setMobileTimelinesExpanded(!mobileTimelinesExpanded)}>Timelines <IoIosArrowDown className="inline" /></button>
+          <button className="hover:text-[#DB4A4A]" onClick={() => setMobileTimelinesExpanded(!mobileTimelinesExpanded)}>Timelines <IoIosArrowDown className="ml-2 inline" /></button>
           <div className={`${mobileTimelinesExpanded ? "max-h-80 visible mt-2" : "max-h-0 invisible"} overflow-hidden flex flex-col gap-3`}>
             <Link href="/timeline/photos" className="hover:text-[#DB4A4A] ml-4">Photos</Link>
             <Link href="/timeline/officers" className="hover:text-[#DB4A4A] ml-4">Officers</Link>
