@@ -4,7 +4,7 @@ import { twMerge } from "tailwind-merge"
 import Image from "next/image";
 import Link from "next/link";
 
-const footer = cva(["flex", "lg:h-40", "h-96", "w-full", "mx-auto", "max-w-screen-xl", "flex", "sm:gap-52", "gap-10", "flex-col", "sm:flex-row", "mt-20", "xl:px-0", "px-7", "mb-10"], {
+const footer = cva(["flex", "lg:h-40", "h-96", "w-full", "mx-auto", "max-w-screen-xl", "flex", "sm:gap-52", "gap-10", "flex-col", "sm:flex-row", "mt-20", "xl:mx-auto mx-8", "xl:px-0", "px-7", "mb-10", "bg-[var(--primary-background-color)]"], {
   variants: {
     intent: {
       primary: ["text-primary"],

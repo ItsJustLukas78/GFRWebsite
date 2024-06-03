@@ -41,12 +41,10 @@ export default function Web() {
 
   }, {scope: container})
 
-  const emojis = ['😀', '🎉', '🚀', '🌟', '🐱', '🍕'];
-
   return (
     <div ref={container} className="mx-10 gap-16 flex flex-col pt-24 lg:pt-0 -mt-24">
-      <section className="relative h-screen flex flex-col px-5">
-        <div className="hero_heading_title opacity-0 mx-auto flex max-w-screen-xl h-full items-center justify-center">
+      <section className="relative h-screen flex flex-col px-5 bg-[var(--primary-background-color)]">
+        <div className="hero_heading_title opacity-0 mx-auto flex max-w-screen-xl sm:h-full h-1/2 items-center justify-center">
           <div className="lg:w-1/2 w-full flex flex-col">
             <h1 className="mb-6 max-w-5xl font-semibold leading-none tracking-tight text-primary text-5xl sm:text-7xl md:text-8xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-balance">
               Dublin High&apos;s

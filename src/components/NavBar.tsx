@@ -58,7 +58,7 @@ export function NavBar({ intent, className }: NavBarProps) {
         <Link href="/#about" className="hover:text-[#DB4A4A]">About Us</Link>
         <div className="relative group">
           <Link className="hover:text-[#DB4A4A]" href="/#teams">Teams <IoIosArrowDown className="inline" /></Link>
-          <div className="group-hover:max-h-80 group-hover:visible group-hover:p-3 mt-3 max-h-0 invisible overflow-hidden flex flex-col gap-3 absolute z-10 bg-neutral-800/50 text-white rounded-md p-0 max-w-[200px] min-w-[100px] transition-all duration-500">
+          <div className="group-hover:max-h-80 group-hover:visible group-hover:p-3 mt-3 max-h-0 invisible overflow-hidden flex flex-col gap-3 absolute z-10 bg-neutral-800/80 text-white rounded-md p-0 max-w-[200px] min-w-[80px] transition-all duration-500">
             {Teams.map((team: TeamType) => {
               return <Link key={team.teamNumber} href={`/team/${team.teamNumber}`} className="hover:text-[#DB4A4A]">{team.teamNumber}</Link>
             })}
@@ -67,10 +67,10 @@ export function NavBar({ intent, className }: NavBarProps) {
         <Link href="/join" className="hover:text-[#DB4A4A]">Join Us</Link>
         <div className="relative group">
           <button className="hover:text-[#DB4A4A]">Timelines <IoIosArrowDown className="inline" /></button>
-          <div className="group-hover:max-h-80 group-hover:visible group-hover:p-3 mt-3 max-h-0 invisible overflow-hidden flex flex-col gap-3 absolute z-10 bg-neutral-800/50 text-white rounded-md p-0 max-w-[200px] min-w-[100px] transition-all duration-500">
+          <div className="group-hover:max-h-80 group-hover:visible group-hover:p-3 mt-3 max-h-0 invisible overflow-hidden flex flex-col gap-3 absolute z-10 bg-neutral-800/80 text-white rounded-md p-0 max-w-[200px] min-w-[80px] transition-all duration-500">
             <Link href="/timeline/photos" className="hover:text-[#DB4A4A]">Photos</Link>
             <Link href="/timeline/officers" className="hover:text-[#DB4A4A]">Officers</Link>
-            <Link href="/timeline/achievements" className="hover:text-[#DB4A4A]">Achievements</Link>
+            <Link href="/timeline/achievements" className="hover:text-[#DB4A4A]">Awards</Link>
           </div>
         </div>
         {/*<div className="relative group">*/}

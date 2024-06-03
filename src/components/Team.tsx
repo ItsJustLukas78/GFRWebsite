@@ -38,7 +38,7 @@ export function Team({
   return (
     <div className={twMerge(team({ intent, className }))}>
       <div className="flex items-center sm:flex-row flex-col">
-        <div className="bg-neutral-800 rounded-lg p-2 sm:mr-4 sm:mb-0 mb-4 shadow-lg shadow-black">
+        <div className="bg-neutral-800 rounded-lg flex items-center p-2 sm:mr-4 sm:mb-0 mb-4 shadow-lg shadow-black min-h-[250px]">
           <Image
             src={imageUrl}
             className="rounded-md"
