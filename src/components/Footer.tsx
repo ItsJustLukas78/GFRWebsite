@@ -30,8 +30,9 @@ export function Footer({ intent, className }: FooterProps) {
     </div>
     <div className="flex lg:flex-row flex-col gap-8 mt-5 [&>*]:font-medium [&>*]:h-min [&>*]:transition-colors [&>*]:duration-500">
       <Link href="/#events" className="hover:text-[#DB4A4A]">Events</Link>
+      <Link href="/announcements" className="hover:text-[#DB4A4A]">Blog</Link>
       <Link href="/#about" className="hover:text-[#DB4A4A]">About Us</Link>
-      <Link href="/#teams" className="hover:text-[#DB4A4A]">Teams</Link>
+      <Link href="/teams" className="hover:text-[#DB4A4A]">Teams</Link>
       <Link href="/join" className="hover:text-[#DB4A4A]">Join Us</Link>
       <Link href="/timeline" className="hover:text-[#DB4A4A]">Timeline</Link>
     </div>

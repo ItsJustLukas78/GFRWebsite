@@ -12,8 +12,6 @@ import Link from "next/link";
 import Tilt from 'react-parallax-tilt';
 
 import EmojiScene from "@/components/EmojiCanvas";
-import {Team} from "@/components/Team";
-import {TeamType, Teams} from "@/data/teams";
 
 
 export default function Web() {
@@ -43,7 +41,7 @@ export default function Web() {
 
   return (
     <div ref={container} className="mx-10 gap-16 flex flex-col pt-24 lg:pt-0 -mt-24">
-      <section className="relative h-screen flex flex-col px-5 bg-[var(--primary-background-color)]">
+      <section className="relative h-screen flex flex-col bg-[var(--primary-background-color)]">
         <div className="hero_heading_title opacity-0 mx-auto flex max-w-screen-xl sm:h-full h-1/2 items-center justify-center">
           <div className="lg:w-1/2 w-full flex flex-col">
             <h1 className="mb-6 max-w-5xl font-semibold leading-none tracking-tight text-primary text-5xl sm:text-7xl md:text-8xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-balance">
@@ -79,7 +77,7 @@ export default function Web() {
       </section>
       <section className="hero_rest opacity-0 gap-16 flex flex-col">
         <section className="">
-          <div className="mx-auto max-w-screen-xl flex flex-col px-5">
+          <div className="mx-auto max-w-screen-xl flex flex-col">
             <h1 id="events" className="mb-6 max-w-2xl scroll-m-24 font-semibold leading-none tracking-tight text-primary text-3xl md:text-4xl xl:text-5xl">
               Events for 2024-2025
             </h1>
@@ -129,7 +127,7 @@ export default function Web() {
           </div>
         </section>
         <section className="">
-          <div className="hero_marquee mx-auto max-w-screen-xl px-5">
+          <div className="hero_marquee mx-auto max-w-screen-xl">
             <h1 id="sponsors" className="mb-10 max-w-2xl scroll-m-24 font-semibold leading-none uppercase tracking-wider text-primary text-xl md:text-2xl xl:text-3xl">
               Our Sponsors
             </h1>
@@ -145,12 +143,12 @@ export default function Web() {
           </div>
         </section>
         <section className="">
-          <div className="mx-auto max-w-screen-xl flex flex-col px-5">
+          <div className="mx-auto max-w-screen-xl flex flex-col">
             <h1 id="about" className="mb-10 max-w-2xl scroll-m-24 font-semibold leading-none tracking-tight text-primary text-3xl md:text-4xl xl:text-5xl">
               About Us
             </h1>
             <div className="flex flex-col lg:flex-row gap-2">
-              <div className="flex flex-col lg:w-1/2 pr-5">
+              <div className="flex flex-col lg:w-1/2">
                 <p className="mb-6 font-light text-gray-400 md:text-lg lg:mb-8 lg:text-xl leading-relaxed text-balance">
                   We are an experienced and <span className="font-extrabold">completely student-run</span> high school club whose members work on both real life
                   engineering projects and participate in the VEX Robotics Competition.
@@ -189,27 +187,6 @@ export default function Web() {
                   allowed them to learn so much.
                 </p>
               </div>
-            </div>
-          </div>
-        </section>
-        <section className="">
-          <div className="mx-auto max-w-screen-xl flex flex-col px-5">
-            <h1 id="teams" className="mb-10 max-w-2xl scroll-m-24 font-semibold leading-none tracking-tight text-primary text-3xl md:text-4xl xl:text-5xl">
-              Teams
-            </h1>
-            <div className="flex flex-col gap-9">
-              {Teams.map((team: TeamType) => {
-                return (
-                  <Team
-                    key={team.teamNumber}
-                    imageUrl={team.imageUrl}
-                    teamName={team.teamName}
-                    teamNumber={team.teamNumber}
-                    captainName={team.captainName}
-                    memberNames={team.memberNames}
-                  />
-                )
-              })}
             </div>
           </div>
         </section>
