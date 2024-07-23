@@ -12,6 +12,7 @@ import Link from "next/link";
 import Tilt from 'react-parallax-tilt';
 
 import EmojiScene from "@/components/EmojiCanvas";
+import { EventType, events } from "@/data/events";
 
 
 export default function Web() {
@@ -81,43 +82,17 @@ export default function Web() {
             <h1 id="events" className="mb-6 max-w-2xl scroll-m-24 font-semibold leading-none tracking-tight text-primary text-3xl md:text-4xl xl:text-5xl">
               Events for 2024-2025
             </h1>
-            {/*project 1 using bento box flip*/}
             <div className="grid md:grid-cols-2 grid-cols-1 grid-rows-1 gap-8">
-              <BentoBox
-                title="Fall GFR Showcase"
-                description="Meet us and learn about what we do and see if you want to join this season!"
-                date="August 30, 2024"
-                image="/showcase2024.jpg"
-                size="onexy"
-              />
-              <BentoBox
-                title="GirlPowered Workshop"
-                description="Promoting diversity in STEM, girls are invited to learn about robotics and engineering!"
-                date="Oct 11-12, 2024"
-                image="/girlpowered2024.jpg"
-                size="onexy"
-              />
-              <BentoBox
-                title="Battle of The Bay"
-                description="Our annual competition where teams from all over the Bay Area come to compete!"
-                date="Jan 19, 2025"
-                image="/botb2024.jpg"
-                size="twoxy"
-              />
-              <BentoBox
-                title="All-Inclusive Workshop"
-                description="A workshop for all students to learn about robotics and engineering!"
-                date="Nov 11-12, 2024"
-                image="/showcase2024.jpg"
-                size="onexy"
-              />
-              <BentoBox
-                title="Battle of The Bay Skills"
-                description="Come to our late season skills event to get in your last minute skills scores in!"
-                date={"Feb 22, 2025"}
-                image="/atikshsize.jpg"
-                size="onexy"
-              />
+              {events.map((event: EventType, index: number) => (
+                <BentoBox
+                  key={index}
+                  title={event.title}
+                  description={event.description}
+                  date={event.date}
+                  image={event.image}
+                  size={event.size}
+                />
+              ))}
             </div>
           </div>
         </section>

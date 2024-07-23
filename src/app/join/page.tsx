@@ -82,7 +82,8 @@ export default function Web() {
             Club Enrollment Form
           </h1>
           <p className="mb-10 font-light text-gray-400 md:text-lg lg:mb-8 lg:text-xl leading-relaxed text-balance">
-            Before becoming an official member of our club, you must first fill out our <a href="https://tinyurl.com/gfrenrollment24-25" target="_blank" className="font-bold text-primary underline">enrollment form</a>. Upon completion, you will become a member of our club development academy.
+            Before becoming an official member of our club, you must first fill out our <a href="https://tinyurl.com/gfrenrollment24-25" target="_blank" className="font-bold text-primary underline">enrollment form</a> after looking at our <a href="https://tinyurl.com/gfrexpectations24-25" target="_blank" className="font-bold text-primary underline">expectations</a>. Upon completion, you will become a member of our club development academy.
+            If you would like to make a donation to our club, you can do so <a href="https://tinyurl.com/gfrdonation" target="_blank" className="font-bold text-primary underline">here</a>.
           </p>
           <h1 className="mb-6 max-w-2xl text-3xl scroll-m-24 font-semibold leading-none tracking-tight text-primary md:text-4xl xl:text-5xl">
             Parent Information Meeting

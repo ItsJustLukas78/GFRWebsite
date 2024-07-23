@@ -53,7 +53,7 @@ export function NavBar({ intent, className }: NavBarProps) {
       <div className="lg:hidden ml-auto text-primary">
         <Hamburger toggled={hamburgerOpen} toggle={setHamburgerOpen} direction="left" size={28} />
       </div>
-      <div  className="hidden justify-center space-x-8 lg:flex ml-auto sm:text-lg text-sm [&>*]:font-medium [&>*]:h-min [&>*]:transition-colors [&>*]:duration-500">
+      <div  className="hidden justify-center items-center space-x-8 lg:flex ml-auto sm:text-lg text-sm [&>*]:font-medium [&>*]:h-min [&>*]:transition-colors [&>*]:duration-500">
         <Link href="/#events" className="hover:text-[#DB4A4A]">Events</Link>
         <Link href="/announcements" className="hover:text-[#DB4A4A]">Blog</Link>
         <Link href="/#about" className="hover:text-[#DB4A4A]">About Us</Link>
@@ -105,7 +105,7 @@ export function NavBar({ intent, className }: NavBarProps) {
           <button className="hover:text-[#DB4A4A]" onClick={() => setMobileTimelinesExpanded(!mobileTimelinesExpanded)}>More <IoIosArrowDown className="ml-2 inline" /></button>
           <div className={`${mobileTimelinesExpanded ? "max-h-80 visible mt-2" : "max-h-0 invisible"} overflow-hidden flex flex-col gap-3`}>
             <Link href="/officers" className="hover:text-[#DB4A4A] ml-4">Officers</Link>
-            <Link href="/timeline/achievements" className="hover:text-[#DB4A4A] ml-4">Achievements</Link>
+            <Link href="/timeline/achievements" className="hover:text-[#DB4A4A] ml-4">Awards</Link>
           </div>
         </div>
         {/*<div className="relative group">*/}
