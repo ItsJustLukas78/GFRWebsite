@@ -150,13 +150,13 @@ export default function Web() {
               Our Sponsors
             </h1>
             <Marquee pauseOnHover={true} speed={50} className="mx-auto max-w-screen-xl min-h-36">
-              <img src="/GFRLogo.png" alt="GFR Logo" width={200} height={200} className="mr-10 md:block hidden"/>
-              <img src="/GFRLogo.png" alt="GFR Logo" width={200} height={200} className="mr-10 md:block hidden"/>
-              <img src="/GFRLogo.png" alt="GFR Logo" width={200} height={200} className="mr-10 md:block hidden"/>
+              <img src="/logoboss.png" alt="LogoBoss Logo" width={200} height={200} className="mr-10 md:block hidden"/>
+              <img src="/robosource.png" alt="robosource Logo" width={200} height={200} className="mr-10 md:block hidden"/>
+              {/*<img src="/GFRLogo.png" alt="GFR Logo" width={200} height={200} className="mr-10 md:block hidden"/>*/}
 
-              <img src="/GFRLogo.png" alt="GFR Logo" width={100} height={100} className="mr-10 md:hidden block"/>
-              <img src="/GFRLogo.png" alt="GFR Logo" width={100} height={100} className="mr-10 md:hidden block"/>
-              <img src="/GFRLogo.png" alt="GFR Logo" width={100} height={100} className="mr-10 md:hidden block"/>
+              <img src="/logoboss.png" alt="LogoBoss Logo" width={100} height={100} className="mr-10 md:hidden block"/>
+              <img src="/robosource.png" alt="RoboSource Logo" width={100} height={100} className="mr-10 md:hidden block"/>
+              {/*<img src="/GFRLogo.png" alt="GFR Logo" width={100} height={100} className="mr-10 md:hidden block"/>*/}
             </Marquee>
           </div>
         </section>

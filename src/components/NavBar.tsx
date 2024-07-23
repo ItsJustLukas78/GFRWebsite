@@ -58,15 +58,8 @@ export function NavBar({ intent, className }: NavBarProps) {
         <Link href="/announcements" className="hover:text-[#DB4A4A]">Blog</Link>
         <Link href="/#about" className="hover:text-[#DB4A4A]">About Us</Link>
         <Link href="/teams" className="hover:text-[#DB4A4A]">Teams</Link>
-        {/*<div className="relative group">*/}
-        {/*  <Link className="hover:text-[#DB4A4A]" href="/#teams">Teams <IoIosArrowDown className="inline" /></Link>*/}
-        {/*  <div className="group-hover:max-h-80 group-hover:visible group-hover:p-3 mt-3 max-h-0 invisible overflow-hidden flex flex-col gap-3 absolute z-10 bg-neutral-800/80 text-white rounded-md p-0 max-w-[200px] min-w-[80px] transition-all duration-500">*/}
-        {/*    {Teams.map((team: TeamType) => {*/}
-        {/*      return <Link key={team.teamNumber} href={`/team/${team.teamNumber}`} className="hover:text-[#DB4A4A]">{team.teamNumber}</Link>*/}
-        {/*    })}*/}
-        {/*  </div>*/}
-        {/*</div>*/}
-        <Link href="/join" className="hover:text-[#DB4A4A]">Join Us</Link>
+        <Link href="/join" className="hover:text-[#DB4A4A]">Join</Link>
+        <a target="_blank" href="https://docs.google.com/presentation/d/1ZvMV6ziZNt63Mm3749HrOVxo322CvukH_DT45OQRQqM/edit?usp=sharing" className="hover:text-[#DB4A4A]">Sponsor Packet</a>
         <div className="relative group">
           <button className="hover:text-[#DB4A4A]">More <IoIosArrowDown className="inline" /></button>
           <div className="group-hover:max-h-80 group-hover:visible group-hover:p-3 mt-3 max-h-0 invisible overflow-hidden flex flex-col gap-3 absolute z-10 bg-neutral-800/80 text-white rounded-md p-0 max-w-[200px] min-w-[80px] transition-all duration-500">
@@ -74,13 +67,6 @@ export function NavBar({ intent, className }: NavBarProps) {
             <Link href="/timeline/achievements" className="hover:text-[#DB4A4A]">Awards</Link>
           </div>
         </div>
-        {/*<div className="relative group">*/}
-        {/*  <button className="hover:text-[#DB4A4A]">More <IoIosArrowDown className="inline" /></button>*/}
-        {/*  <div className="group-hover:max-h-80 group-hover:visible group-hover:p-3 mt-3 max-h-0 invisible overflow-hidden flex flex-col gap-3 absolute z-10 bg-neutral-800/50 text-white rounded-md p-0 max-w-[200px] min-w-[100px] transition-all duration-500">*/}
-        {/*    <Link href="/idk" className="hover:text-[#DB4A4A]">More Stuff</Link>*/}
-        {/*    <Link href="/idk" className="hover:text-[#DB4A4A]">More</Link>*/}
-        {/*  </div>*/}
-        {/*</div>*/}
       </div>
     </div>
     <div className={`lg:hidden ${hamburgerOpen ? "block" : "hidden"} w-full pb-5 pl-5 sm:text-xl text-lg font-medium bg-[var(--primary-background-color)] text-white absolute top-24 left-0 right-0 z-10`}>
@@ -89,18 +75,8 @@ export function NavBar({ intent, className }: NavBarProps) {
         <Link href="/announcements" className="hover:text-[#DB4A4A]">Blog</Link>
         <Link href="/#about" className="hover:text-[#DB4A4A]">About Us</Link>
         <Link href="/teams" className="hover:text-[#DB4A4A]">Teams</Link>
-        {/*<div className="relative flex flex-col items-start">*/}
-        {/*  <div className="hover:text-[#DB4A4A]">*/}
-        {/*    <Link className="hover:text-[#DB4A4A]" href="/#teams">Teams</Link>*/}
-        {/*    <IoIosArrowDown className="ml-2 inline" onClick={() => setMobileTeamsExpanded(!mobileTeamsExpanded)} />*/}
-        {/*  </div>*/}
-        {/*  <div className={`${mobileTeamsExpanded ? "max-h-80 visible mt-2" : "max-h-0 invisible"} overflow-hidden flex flex-col gap-3`}>*/}
-        {/*    {Teams.map((team: TeamType) => {*/}
-        {/*      return <Link key={team.teamNumber} href={`/team/${team.teamNumber}`} className="hover:text-[#DB4A4A] ml-4">{team.teamNumber}</Link>*/}
-        {/*    })}*/}
-        {/*  </div>*/}
-        {/*</div>*/}
-        <Link href="/join" className="hover:text-[#DB4A4A]">Join Us</Link>
+        <Link href="/join" className="hover:text-[#DB4A4A]">Join</Link>
+        <a target="_blank" href="https://docs.google.com/presentation/d/1ZvMV6ziZNt63Mm3749HrOVxo322CvukH_DT45OQRQqM/edit?usp=sharing" className="hover:text-[#DB4A4A]">Sponsor Packet</a>
         <div className="relative group">
           <button className="hover:text-[#DB4A4A]" onClick={() => setMobileTimelinesExpanded(!mobileTimelinesExpanded)}>More <IoIosArrowDown className="ml-2 inline" /></button>
           <div className={`${mobileTimelinesExpanded ? "max-h-80 visible mt-2" : "max-h-0 invisible"} overflow-hidden flex flex-col gap-3`}>
@@ -108,13 +84,6 @@ export function NavBar({ intent, className }: NavBarProps) {
             <Link href="/timeline/achievements" className="hover:text-[#DB4A4A] ml-4">Awards</Link>
           </div>
         </div>
-        {/*<div className="relative group">*/}
-        {/*  <button className="hover:text-[#DB4A4A]">More <IoIosArrowDown className="inline" /></button>*/}
-        {/*  <div className="group hover:max-h-80 hover:visible hover:p-3 mt-3 max-h-0 invisible overflow-hidden flex flex-col gap-3 absolute z-10 bg-neutral-800/50 text-white rounded-md p-0 max-w-[200px] min-w-[100px] transition-all duration-500">*/}
-        {/*    <Link href="/idk" className="hover:text-[#DB4A4A]">More Stuff</Link>*/}
-        {/*    <Link href="/idk" className="hover:text-[#DB4A4A]">More</Link>*/}
-        {/*  </div>*/}
-        {/*</div>*/}
       </div>
     </div>
   </div>

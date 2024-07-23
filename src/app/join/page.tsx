@@ -50,7 +50,7 @@ export default function Web() {
         <EmojiScene />
       </section>
       <section className="">
-        <div className="mx-auto max-w-screen-xl py-8 flex flex-col lg:py-16 px-5 bg-[var(--primary-background-color)]">
+        <div className="mx-auto max-w-screen-xl py-8 flex flex-col lg:py-16 bg-[var(--primary-background-color)]">
           <h1 className="mb-10 max-w-2xl text-3xl scroll-m-44 font-semibold leading-none tracking-tight text-primary md:text-4xl xl:text-5xl">
             The Process
           </h1>
