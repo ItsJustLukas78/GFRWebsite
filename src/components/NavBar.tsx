@@ -54,11 +54,11 @@ export function NavBar({ intent, className }: NavBarProps) {
         <Hamburger toggled={hamburgerOpen} toggle={setHamburgerOpen} direction="left" size={28} />
       </div>
       <div  className="hidden justify-center items-center space-x-8 lg:flex ml-auto sm:text-lg text-sm [&>*]:font-medium [&>*]:h-min [&>*]:transition-colors [&>*]:duration-500">
-        <Link href="/#events" className="hover:text-[#DB4A4A]">Events</Link>
-        <Link href="/announcements" className="hover:text-[#DB4A4A]">Blog</Link>
         <Link href="/#about" className="hover:text-[#DB4A4A]">About Us</Link>
+        <Link href="/#events" className="hover:text-[#DB4A4A]">Events</Link>
         <Link href="/teams" className="hover:text-[#DB4A4A]">Teams</Link>
         <Link href="/join" className="hover:text-[#DB4A4A]">Join</Link>
+        <Link href="/announcements" className="hover:text-[#DB4A4A]">Blog</Link>
         <a target="_blank" href="https://docs.google.com/presentation/d/1ZvMV6ziZNt63Mm3749HrOVxo322CvukH_DT45OQRQqM/edit?usp=sharing" className="hover:text-[#DB4A4A]">Sponsor Packet</a>
         <div className="relative group">
           <button className="hover:text-[#DB4A4A]">More <IoIosArrowDown className="inline" /></button>
@@ -71,11 +71,11 @@ export function NavBar({ intent, className }: NavBarProps) {
     </div>
     <div className={`lg:hidden ${hamburgerOpen ? "block" : "hidden"} w-full pb-5 pl-5 sm:text-xl text-lg font-medium bg-[var(--primary-background-color)] text-white absolute top-24 left-0 right-0 z-10`}>
       <div className="flex flex-col gap-3 p-4">
-        <Link href="/#events" className="hover:text-[#DB4A4A]">Events</Link>
-        <Link href="/announcements" className="hover:text-[#DB4A4A]">Blog</Link>
         <Link href="/#about" className="hover:text-[#DB4A4A]">About Us</Link>
+        <Link href="/#events" className="hover:text-[#DB4A4A]">Events</Link>
         <Link href="/teams" className="hover:text-[#DB4A4A]">Teams</Link>
         <Link href="/join" className="hover:text-[#DB4A4A]">Join</Link>
+        <Link href="/announcements" className="hover:text-[#DB4A4A]">Blog</Link>
         <a target="_blank" href="https://docs.google.com/presentation/d/1ZvMV6ziZNt63Mm3749HrOVxo322CvukH_DT45OQRQqM/edit?usp=sharing" className="hover:text-[#DB4A4A]">Sponsor Packet</a>
         <div className="relative group">
           <button className="hover:text-[#DB4A4A]" onClick={() => setMobileTimelinesExpanded(!mobileTimelinesExpanded)}>More <IoIosArrowDown className="ml-2 inline" /></button>

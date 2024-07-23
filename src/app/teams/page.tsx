@@ -1,14 +1,6 @@
 "use client"
 import Image from 'next/image';
-import {BentoBox} from "@/components/BentoBox";
-import Marquee from "react-fast-marquee";
 
-import { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-
-import userPrefersReducedMotion from "@/hooks/userPrefersReducedMotion";
-import Link from "next/link";
 import Tilt from 'react-parallax-tilt';
 
 import EmojiScene from "@/components/EmojiCanvas";
