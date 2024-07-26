@@ -2,6 +2,7 @@ export interface PageMeta {
   title: string
   description: string
   author: string
+  authorRole?: string
   date: string
   image?: string
   imageDescription?: string

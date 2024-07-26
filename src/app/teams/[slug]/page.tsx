@@ -4,7 +4,32 @@ import GalleryWithLightBox from "@/components/GalleryWithLightBox";
 
 import {getTeamBySlug} from '@/lib/teams'
 import {TeamMeta} from "@/lib/definitions";
+import { Metadata, ResolvingMetadata } from 'next'
 
+type Props = {
+  params: { slug: string }
+  searchParams: { [key: string]: string | string[] | undefined }
+}
+
+export async function generateMetadata(
+  { params, searchParams }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  // read route params
+  const {content} = await getPageContent(params.slug)
+
+  return {
+    title: content.teamNumber + ' | ' + "GFR Teams",
+    description: content.aboutSection ? content.aboutSection : "Meet Gael Force Robotics Competitive Team " + content.teamNumber,
+    openGraph: {
+      images: [
+        {
+          url: "https://www.gaelforcerobotics.com" + content.teamPicture,
+        },
+      ]
+    },
+  }
+}
 
 const getPageContent = async (slug: any): Promise<{ content: TeamMeta }> => {
   const {content} = await getTeamBySlug(slug)

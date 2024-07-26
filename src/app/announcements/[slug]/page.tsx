@@ -2,6 +2,36 @@ import {getPostBySlug} from '@/lib/mdx'
 import {PageMeta} from "@/lib/definitions";
 import Image from 'next/image'
 
+import { Metadata, ResolvingMetadata } from 'next'
+
+type Props = {
+  params: { slug: string }
+  searchParams: { [key: string]: string | string[] | undefined }
+}
+
+export async function generateMetadata(
+  { params, searchParams }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  // read route params
+  const {meta} = await getPageContent(params.slug)
+
+  return {
+    title: meta.title + ' | ' + "GFR Announcements",
+    description: "Written by " + meta.author + " on " + meta.date + ": " + meta.description,
+    openGraph: {
+      authors: [meta.author],
+      images: [
+        {
+          url: "https://www.gaelforcerobotics.com/" + meta.image,
+          width: 800,
+          height: 400,
+        },
+      ]
+    },
+  }
+}
+
 const getPageContent = async (slug: any): Promise<{ meta: PageMeta, content: any }> => {
   const {meta, content} = await getPostBySlug(slug)
   return {meta, content}
@@ -17,7 +47,7 @@ const Blog = async ({params}: any) => {
           <div className="mx-auto flex max-w-screen-md flex-col px-5">
             <h1 className='text-3xl font-bold leading-tight text-pretty sm:text-4xl md:text-6xl'>{meta.title}</h1>
             <p className='mt-5 text-xl text-gray-400'>{meta.description}</p>
-            {meta.author && <p className='mt-5 text-sm'>{meta.author}</p>}
+            {meta.author && <p className='mt-5 text-sm'>{meta.author + (meta.authorRole ? ', ' + meta.authorRole : '')}</p>}
             {meta.date && <time className='mt-1 text-sm text-gray-400'>{meta.date}</time>}
             <hr className='mt-6'/>
             {meta.image &&

@@ -26,7 +26,7 @@ export default async function AnnouncementsLayout() {
                   }
                   <div className="absolute inset-0 p-8 pt-12 outlinedText">
                     <h3 className='text-xl font-semibold md:text-md md:text-lg lg:text-xl'>{post.title}</h3>
-                    <p className='mt-4 text-lg md:text-sm lg:text-md'>{post.author}</p>
+                    <p className='mt-4 text-lg md:text-sm lg:text-md'>{post.author + (post.authorRole ? ', ' + post.authorRole : '')}</p>
                     <time className='text-lg text-gray-100 md:text-sm lg:text-md'>
                       {post.date}
                     </time>
