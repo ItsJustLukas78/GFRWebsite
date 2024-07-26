@@ -22,8 +22,9 @@ const Blog = async ({params}: any) => {
             <hr className='mt-6'/>
             {meta.image &&
               <>
-                <Image src={`/${meta.image}`} alt={meta.title} width={800} height={400} className='mt-6 w-full'/>
-                <hr className='mt-6'/>
+                <Image src={`/${meta.image}`} alt={meta.title} width={800} height={400} className='mt-3 w-full'/>
+                <p className='mt-3 text-sm text-gray-400'>{meta.imageDescription}</p>
+                <hr className='mt-3'/>
               </>
             }
             <div className='mt-20 markdown'>
