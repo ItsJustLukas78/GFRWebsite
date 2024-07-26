@@ -58,3 +58,7 @@ html, body {
 .markdown ul, .markdown ol {
     @apply list-disc pl-3 sm:pl-4 mb-4 sm:mb-5 text-pretty;
 }
+
+.markdown a {
+    @apply font-bold underline text-primary;
+}
