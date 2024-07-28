@@ -8,19 +8,23 @@ import {PageMeta} from "@/lib/definitions";
 
 const rootDirectory = path.join(process.cwd(), 'src', 'data', 'posts')
 
-export const getPostBySlug = async (slug): Promise<{ meta: PageMeta, content: any }> => {
+export const getPostBySlug = async (slug): Promise<{ meta: PageMeta, content: any } | null> => {
   const realSlug = slug.replace(/\.mdx$/, '')
-  const filePath = path.join(rootDirectory, `${realSlug}.mdx`)
 
-  const fileContent = fs.readFileSync(filePath, { encoding: 'utf8' })
+  try {
+    const filePath = path.join(rootDirectory, `${realSlug}.mdx`)
+    const fileContent = fs.readFileSync(filePath, { encoding: 'utf8' })
 
-  const { frontmatter, content } = await compileMDX({
-    source: fileContent,
-    components: useMDXComponents(),
-    options: { parseFrontmatter: true }
-  })
+    const { frontmatter, content } = await compileMDX({
+      source: fileContent,
+      components: useMDXComponents(),
+      options: { parseFrontmatter: true }
+    })
 
-  return { meta: { ...frontmatter, slug: realSlug }, content }
+    return { meta: { ...frontmatter, slug: realSlug }, content }
+  } catch (e) {
+    return null
+  }
 }
 
 export const getAllPostsMeta = async () => {
@@ -29,8 +33,10 @@ export const getAllPostsMeta = async () => {
   let posts = []
 
   for (const file of files) {
-    const { meta } = await getPostBySlug(file)
-    posts.push(meta)
+    const data = await getPostBySlug(file)
+    if (data) {
+      posts.push(data.meta)
+    }
   }
 
   return posts

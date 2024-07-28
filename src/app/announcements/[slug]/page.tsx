@@ -3,6 +3,8 @@ import {PageMeta} from "@/lib/definitions";
 import Image from 'next/image'
 
 import { Metadata, ResolvingMetadata } from 'next'
+import { notFound } from 'next/navigation'
+
 
 type Props = {
   params: { slug: string }
@@ -14,12 +16,24 @@ export async function generateMetadata(
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   // read route params
-  const {meta} = await getPageContent(params.slug)
+  const contentData = await getPageContent(params.slug)
+
+  if (!contentData) {
+    return {
+      title: 'Page Not Found | GFR Announcements',
+      description: 'The page you are looking for does not exist.',
+    }
+  }
+
+  const {meta} = contentData
 
   return {
     title: meta.title + ' | ' + "GFR Announcements",
     description: "Written by " + meta.author + " on " + meta.date + ": " + meta.description,
     openGraph: {
+      title: meta.title + ' | ' + "GFR Announcements",
+      description: "Written by " + meta.author + " on " + meta.date + ": " + meta.description,
+      type: 'article',
       authors: [meta.author],
       images: [
         {
@@ -32,13 +46,23 @@ export async function generateMetadata(
   }
 }
 
-const getPageContent = async (slug: any): Promise<{ meta: PageMeta, content: any }> => {
-  const {meta, content} = await getPostBySlug(slug)
-  return {meta, content}
+const getPageContent = async (slug: any): Promise<{ meta: PageMeta, content: any } | null> => {
+  const post = await getPostBySlug(slug)
+  if (!post) {
+    return null
+  }
+  return post
 }
 
 const Blog = async ({params}: any) => {
-  const {content, meta} = await getPageContent(params.slug)
+  const contentData = await getPageContent(params.slug)
+
+  if (!contentData) {
+    notFound()
+    return
+  }
+
+  const {meta, content} = contentData
 
   return (
     <div className="mx-0 flex flex-col gap-16 pt-20 text-primary lg:mx-10 lg:pt-12">

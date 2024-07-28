@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: "Teams | GFR",
   description: "Meet the active competitive teams of Gael Force Robotics.",
   openGraph: {
+    title: "Teams | GFR",
+    description: "Meet the active competitive teams of Gael Force Robotics.",
+    type: 'website',
     images: [
       {
         url: "https://www.gaelforcerobotics.com/steambooth.jpg",

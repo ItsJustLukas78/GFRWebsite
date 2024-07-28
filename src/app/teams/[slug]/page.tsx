@@ -1,10 +1,10 @@
 import NextImage from 'next/image';
 import Link from 'next/link';
 import GalleryWithLightBox from "@/components/GalleryWithLightBox";
-
-import {getTeamBySlug} from '@/lib/teams'
-import {TeamMeta} from "@/lib/definitions";
-import { Metadata, ResolvingMetadata } from 'next'
+import { getTeamBySlug } from '@/lib/teams';
+import { TeamMeta } from "@/lib/definitions";
+import { Metadata, ResolvingMetadata } from 'next';
+import { notFound } from 'next/navigation';
 
 type Props = {
   params: { slug: string }
@@ -15,36 +15,56 @@ export async function generateMetadata(
   { params, searchParams }: Props,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-  // read route params
-  const {content} = await getPageContent(params.slug)
+  const contentData = await getPageContent(params.slug);
+
+  if (!contentData) {
+    return {
+      title: 'Page Not Found',
+      description: 'The page you are looking for does not exist.',
+    };
+  }
+
+  const { content } = contentData;
 
   return {
     title: content.teamNumber + ' | ' + "GFR Teams",
     description: content.aboutSection ? content.aboutSection : "Meet Gael Force Robotics Competitive Team " + content.teamNumber,
     openGraph: {
+      title: content.teamNumber + ' | ' + "GFR Teams",
+      description: content.aboutSection ? content.aboutSection : "Meet Gael Force Robotics Competitive Team " + content.teamNumber,
+      type: 'website',
       images: [
         {
           url: "https://www.gaelforcerobotics.com" + content.teamPicture,
         },
       ]
     },
+  };
+}
+
+const getPageContent = async (slug: any): Promise<{ content: TeamMeta } | null> => {
+  const content = await getTeamBySlug(slug);
+  if (!content) {
+    return null;
   }
+  return content;
 }
 
-const getPageContent = async (slug: any): Promise<{ content: TeamMeta }> => {
-  const {content} = await getTeamBySlug(slug)
-  return {content}
-}
+export default async function TeamPage({ params }: any) {
+  const contentData = await getPageContent(params.slug);
 
-export default async function TeamPage({params}: any) {
-  const {content} = await getPageContent(params.slug)
+  if (!contentData) {
+    notFound();
+    return;
+  }
 
-  return <>
+  const { content } = contentData;
+
+  return (
     <div className="relative w-full">
       <div className="absolute -mt-24 w-full h-[500px]">
         <NextImage src={content.teamPicture} alt="teamphoto" fill className="object-cover object-top opacity-40"/>
-        <div
-          className="absolute inset-0 bg-gradient-to-b from-[var(--primary-background-color)] via-transparent to-[var(--primary-background-color)]"/>
+        <div className="absolute inset-0 bg-gradient-to-b from-[var(--primary-background-color)] via-transparent to-[var(--primary-background-color)]"/>
       </div>
       <div className="relative mx-auto max-w-screen-xl px-5 py-8 text-primary z-[5]">
         <section className="mb-28 flex flex-col items-center justify-center sm:mb-64 sm:flex-row">
@@ -54,20 +74,6 @@ export default async function TeamPage({params}: any) {
           </div>
           {content.teamLogo && <img src={content.teamLogo} alt="Team Logo" width={200} height={200}/>}
         </section>
-
-        {/*<hr className="mb-10 border-primary" />*/}
-
-        {/*<section className="mb-10">*/}
-        {/*  <h2 className="mb-4 text-2xl font-semibold text-white">Notable Awards</h2>*/}
-        {/*  <div className="flex overflow-x-auto space-x-4">*/}
-        {/*    {awards.map((award, index) => (*/}
-        {/*      <div key={index} className="flex-shrink-0">*/}
-        {/*        <Image src={award.image} alt={award.name} width={200} height={200} />*/}
-        {/*        <p className="mt-2 text-center text-gray-300">{award.name}</p>*/}
-        {/*      </div>*/}
-        {/*    ))}*/}
-        {/*  </div>*/}
-        {/*</section>*/}
 
         <section className="mb-16 flex items-center">
           <div className="flex flex-col">
@@ -83,8 +89,7 @@ export default async function TeamPage({params}: any) {
             <h2 className="mb-4 text-2xl font-semibold text-white">Team Socials</h2>
             <div className="flex space-x-4">
               {content.socials.map((social, index) => (
-                <Link key={index} href={social.link}><NextImage src={`/${social.name}.png`} alt={social.name} width={32}
-                                                                height={32}/></Link>
+                <Link key={index} href={social.link}><NextImage src={`/${social.name}.png`} alt={social.name} width={32} height={32}/></Link>
               ))}
             </div>
           </section>
@@ -96,11 +101,9 @@ export default async function TeamPage({params}: any) {
               {content.members.map((member, index) => (
                 <div key={index} className="flex w-40 flex-col items-center min-h-60 group lg:min-h-72 lg:w-48">
                   <div className="relative h-32 w-32 lg:h-40 lg:w-40">
-                    <NextImage src={member.image || "/placeholder.png"} alt={member.name} fill
-                               className="rounded-full border-2 object-cover transition-all border-primary group-hover:scale-105 group-hover:border-blue-600 group-hover:brightness-125"/>
+                    <NextImage src={member.image || "/placeholder.png"} alt={member.name} fill className="rounded-full border-2 object-cover transition-all border-primary group-hover:scale-105 group-hover:border-blue-600 group-hover:brightness-125"/>
                   </div>
-                  <p
-                    className="mt-2 w-full text-center font-extrabold text-gray-300 text-md lg:text-xl">{member.name}</p>
+                  <p className="mt-2 w-full text-center font-extrabold text-gray-300 text-md lg:text-xl">{member.name}</p>
                   <p className="w-full text-center text-sm text-gray-300 lg:text-lg">{member.caption}</p>
                 </div>
               ))}
@@ -116,5 +119,5 @@ export default async function TeamPage({params}: any) {
         }
       </div>
     </div>
-  </>
+  );
 }

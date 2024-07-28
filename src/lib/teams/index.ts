@@ -4,13 +4,17 @@ import { TeamMeta } from "@/lib/definitions"
 
 const rootDirectory = path.join(process.cwd(), 'src', 'data', 'teams')
 
-export const getTeamBySlug = async (slug: string): Promise<{ content: TeamMeta }> => {
+export const getTeamBySlug = async (slug: string): Promise<{ content: TeamMeta } | null> => {
   const filePath = path.join(rootDirectory, `${slug}.JSON`)
 
-  const fileContent = fs.readFileSync(filePath, { encoding: 'utf8' })
-  const content = JSON.parse(fileContent) as TeamMeta
+  try {
+    const fileContent = fs.readFileSync(filePath, { encoding: 'utf8' })
+    const content = JSON.parse(fileContent) as TeamMeta
 
-  return { content }
+    return { content }
+  } catch (e) {
+    return null
+  }
 }
 
 export const getAllTeamMeta = async (): Promise<TeamMeta[]> => {
@@ -19,8 +23,10 @@ export const getAllTeamMeta = async (): Promise<TeamMeta[]> => {
   let teams: TeamMeta[] = []
 
   for (const file of files) {
-    const { content } = await getTeamBySlug(file)
-    teams.push(content)
+    const data = await getTeamBySlug(file)
+    if (data) {
+      teams.push(data.content)
+    }
   }
 
   return teams

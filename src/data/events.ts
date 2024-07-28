@@ -17,7 +17,7 @@ export const events: EventType[] = [
   },
   {
     title: "GirlPowered Workshop",
-    date: "Oct 11-12, 2024",
+    date: "Oct 12, 2024",
     description: "Promoting diversity in STEM, girls are invited to learn about robotics and engineering!",
     image: "/girlpowered2024.jpg",
     size: "onexy",
@@ -31,7 +31,7 @@ export const events: EventType[] = [
   },
   {
     title: "All-Inclusive Workshop",
-    date: "Nov 11-12, 2024",
+    date: "Nov 10, 2024",
     description: "A workshop for all students to learn about robotics and engineering!",
     image: "/showcase2024.jpg",
     size: "onexy",

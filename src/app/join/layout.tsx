@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: "Join Us | GFR",
   description: "Join Gael Force Robotics and become a part of our competitive robotics club.",
   openGraph: {
+    title: "Join Us | GFR",
+    description: "Join Gael Force Robotics and become a part of our competitive robotics club.",
+    type: 'website',
     images: [
       {
         url: "https://www.gaelforcerobotics.com/steamworlds.jpg",
