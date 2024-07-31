@@ -48,7 +48,7 @@ export function Footer({ intent, className }: FooterProps) {
       </div>
       <div className="flex flex-col gap-8 sm:flex-row">
         <Link href="/announcements" className="hover:text-[#DB4A4A]">Blog</Link>
-        <a target="_blank" href="https://docs.google.com/presentation/d/1ZvMV6ziZNt63Mm3749HrOVxo322CvukH_DT45OQRQqM/edit?usp=sharing" className="hover:text-[#DB4A4A]">Sponsor Packet</a>
+        <a target="_blank" href="https://drive.google.com/file/d/1yQ2w4mPlkFo14vMSIcObk2ucnIDafrTl/view?usp=sharing" className="hover:text-[#DB4A4A]">Sponsor Packet</a>
         <Link href="/officers" className="hover:text-[#DB4A4A]">Officers</Link>
         <Link href="/timeline/awards" className="hover:text-[#DB4A4A]">Awards</Link>
       </div>

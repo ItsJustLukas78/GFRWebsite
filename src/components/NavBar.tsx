@@ -59,7 +59,7 @@ export function NavBar({ intent, className }: NavBarProps) {
         <Link href="/teams" className="hover:text-[#DB4A4A]">Teams</Link>
         <Link href="/join" className="hover:text-[#DB4A4A]">Join</Link>
         <Link href="/announcements" className="hover:text-[#DB4A4A]">Blog</Link>
-        <a target="_blank" href="https://docs.google.com/presentation/d/1ZvMV6ziZNt63Mm3749HrOVxo322CvukH_DT45OQRQqM/edit?usp=sharing" className="hover:text-[#DB4A4A]">Sponsor Packet</a>
+        <a target="_blank" href="https://drive.google.com/file/d/1yQ2w4mPlkFo14vMSIcObk2ucnIDafrTl/view?usp=sharing" className="hover:text-[#DB4A4A]">Sponsor Packet</a>
         <div className="relative group">
           <button className="hover:text-[#DB4A4A]">More <IoIosArrowDown className="inline" /></button>
           <div className="invisible absolute z-10 mt-3 flex max-h-0 flex-col gap-3 overflow-hidden rounded-md bg-neutral-800/80 p-0 text-white transition-all duration-500 max-w-[200px] min-w-[80px] group-hover:visible group-hover:max-h-80 group-hover:p-3">
@@ -76,7 +76,7 @@ export function NavBar({ intent, className }: NavBarProps) {
         <Link href="/teams" className="hover:text-[#DB4A4A]">Teams</Link>
         <Link href="/join" className="hover:text-[#DB4A4A]">Join</Link>
         <Link href="/announcements" className="hover:text-[#DB4A4A]">Blog</Link>
-        <a target="_blank" href="https://docs.google.com/presentation/d/1ZvMV6ziZNt63Mm3749HrOVxo322CvukH_DT45OQRQqM/edit?usp=sharing" className="hover:text-[#DB4A4A]">Sponsor Packet</a>
+        <a target="_blank" href="https://drive.google.com/file/d/1yQ2w4mPlkFo14vMSIcObk2ucnIDafrTl/view?usp=sharing" className="hover:text-[#DB4A4A]">Sponsor Packet</a>
         <div className="relative group">
           <button className="hover:text-[#DB4A4A]" onClick={() => setMobileTimelinesExpanded(!mobileTimelinesExpanded)}>More <IoIosArrowDown className="ml-2 inline" /></button>
           <div className={`${mobileTimelinesExpanded ? "max-h-80 visible mt-2" : "max-h-0 invisible"} overflow-hidden flex flex-col gap-3`}>
