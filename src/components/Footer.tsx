@@ -29,6 +29,7 @@ export function Footer({ intent, className }: FooterProps) {
       </a>
       <div className="flex flex-col gap-1">
         <h1 className="font-light">© 2024. All Rights Reserved.</h1>
+        <h1 className="font-light">Content by members of GFR</h1>
         <h1 className="font-light">Developed by Lukas Somwong</h1>
       </div>
 
