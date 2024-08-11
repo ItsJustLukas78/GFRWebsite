@@ -97,6 +97,7 @@ export default function Web() {
                   title={event.title}
                   description={event.description}
                   date={event.date}
+                  location={event.location}
                   image={event.image}
                   size={event.size}
                 />

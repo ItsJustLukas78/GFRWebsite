@@ -21,13 +21,14 @@ export interface BentoBoxProps extends VariantProps<typeof bentoBox> {
   title: string
   description: string
   date?: string
+  location: string
   image: string
   className?: string
   link?: string
 }
 
 
-export function BentoBox({ size, className, title, description, date, image, link }: BentoBoxProps) {
+export function BentoBox({ size, className, title, description, location, date, image, link }: BentoBoxProps) {
   return (
     <div className={twMerge(bentoBox({ size, className }))}>
       <div
@@ -39,7 +40,10 @@ export function BentoBox({ size, className, title, description, date, image, lin
       </div>
       <div className="absolute inset-0 flex flex-col items-center justify-center outlinedText">
         <h1 className={`mt-4 ${size !== "onexy" ? "xl:text-5xl" : ""} xl:text-3xl lg:text-2xl md:text-xl text-lg font-extrabold text-center md:px-4 px-2 w-full`}>{title}</h1>
-        {date && <p className={`mt-5 ${size !== "onexy" ? "xl:text-2xl" : ""} xl:text-xl lg:text-lg md:text-md text-sm font-bold leading-relaxed text-center text-balance md:px-4 px-2 w-full`}>{date}</p>}
+        <div className="flex flex-col mt-2">
+          {date && <p className={`${size !== "onexy" ? "xl:text-2xl" : ""} xl:text-xl lg:text-lg md:text-md text-sm font-bold leading-relaxed text-center text-balance md:px-4 px-2 w-full`}>{date}</p>}
+          <p className={`${size !== "onexy" ? "xl:text-2xl" : ""} xl:text-xl lg:text-lg md:text-md text-sm font-bold leading-relaxed text-center text-balance md:px-4 px-2 w-full`}>{location}</p>
+        </div>
         <p className={`mt-5 ${size !== "onexy" ? "xl:text-2xl" : ""} xl:text-xl lg:text-lg md:text-md text-sm font-bold leading-relaxed text-center text-balance md:px-4 px-2 w-full`}>{description}</p>
       </div>
       {link && <>
