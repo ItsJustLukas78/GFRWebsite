@@ -11,8 +11,8 @@ export const Teams: TeamType[] = [
   {
     teamNumber: "5327A",
     teamName: "Gael Force Ascension",
-    captainName: "Sahith Ajay",
-    memberNames: ["Johnathan", "Kimson", "Iji", "Sophia", "Anirudha", "Nathan", "Stephanie", "Aarav", "Phoebe", "Shrinidhi", "Advaith", "Rishi"],
+    captainName: "Sahith Ajay and Anirudha Das",
+    memberNames: ["Johnathan", "Kimson", "Iji", "Sophia", "Nathan", "Stephanie", "Aarav", "Phoebe", "Shrinidhi", "Advaith", "Rishi"],
     imageUrl: "/ALogo.jpg",
   },
   {
@@ -40,7 +40,7 @@ export const Teams: TeamType[] = [
     teamNumber: "5327V",
     teamName: "Gael Force V",
     captainName: "Aarav Kashyap",
-    memberNames: ["Ishaan", "Shikhar", "Rutvik", "Amato", "Kabir", "Eric", "Connor", "Sammy", "Samarth", "Tanisha"],
+    memberNames: ["Ishaan", "Shikhar", "Rutvik", "Amato", "Kabir", "Raajika", "Eric", "Connor", "Sammy", "Samarth", "Tanisha"],
     imageUrl: "/VLogo.png",
   },
   {
