@@ -35,7 +35,7 @@ export function BentoBox({ size, className, title, description, location, date, 
         className="opacity-0 group-hover:opacity-100 transition-all duration-500 animate-rotate absolute inset-0 h-full w-full rounded-full bg-[#8FB5E7]"
       ></div>
       <div className="relative h-full w-full">
-        <Image src={image} alt="Rocket" width={1500} height={1500} className="h-full w-full rounded-lg object-cover brightness-[0.4] group-hover:brightness-[0.5]" />
+        <Image src={image} alt="Article Picture" width={1500} height={1500} className="h-full w-full rounded-lg object-cover brightness-[0.4] group-hover:brightness-[0.5]" />
         <div className="absolute inset-0 rounded-lg backdrop-saturate-[1.2]"></div>
       </div>
       <div className="absolute inset-0 flex flex-col items-center justify-center outlinedText">
