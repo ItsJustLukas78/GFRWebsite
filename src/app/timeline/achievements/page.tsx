@@ -7,7 +7,7 @@ export default function AchievementsPage() {
   return (
     <div className="mx-10 -mt-24 pt-24 sm:flex">
       <div className="my-6 sm:mx-auto sm:max-w-screen-xl">
-        {Achievements.map((achievement: AchievementYear) => {
+        {Achievements.reverse().map((achievement: AchievementYear) => {
           return (
             <div className="relative w-full py-6 pl-8 group sm:pl-32">
               <div
