@@ -5,6 +5,7 @@ export interface EventType {
   description: string;
   image: string;
   size: "onexy" | "twoxoney"; // take up one column or two columns
+  link?: string;
 }
 
 // UPDATE ANNUALLY
@@ -16,6 +17,7 @@ export const events: EventType[] = [
     description: "A great opportunity for students to learn more about Gael Force Robotics and meet existing members!",
     image: "/showcase2024.jpg",
     size: "onexy",
+    link: "https://drive.google.com/file/d/1NlxFUJHgYTZ9KUA45aW0H-XOpvIaWV5u/view?usp=sharing",
   },
   {
     title: "GirlPowered Workshop",
@@ -24,6 +26,7 @@ export const events: EventType[] = [
     description: "An event designed to encourage young girls to get involved in STEM and robotics through hands-on activities.",
     image: "/girlpowered2024.jpg",
     size: "onexy",
+    link: "https://drive.google.com/file/d/1wYqUtLeSC6YkUliQq2bnAN3LFdw5OJHF/view?usp=sharing"
   },
   {
     title: "Battle of The Bay",

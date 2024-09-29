@@ -47,7 +47,7 @@ export function BentoBox({ size, className, title, description, location, date, 
         <p className={`mt-5 ${size !== "onexy" ? "xl:text-2xl" : ""} xl:text-xl lg:text-lg md:text-md text-sm font-bold leading-relaxed text-center text-balance md:px-4 px-2 w-full`}>{description}</p>
       </div>
       {link && <>
-        <Link href={link} className="absolute inset-0 flex h-full w-full flex-col outlinedText"></Link>
+        <a href={link} target="_blank"  className="absolute inset-0 flex h-full w-full flex-col outlinedText"></a>
         <FaArrowRightLong className="absolute right-8 bottom-5 h-8 w-8 outlinedText md:h-10 md:w-10" />
       </>}
     </div>

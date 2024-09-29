@@ -100,6 +100,7 @@ export default function Web() {
                   location={event.location}
                   image={event.image}
                   size={event.size}
+                  link={event.link ? event.link : undefined}
                 />
               ))}
             </div>
