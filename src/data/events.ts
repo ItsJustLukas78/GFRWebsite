@@ -26,7 +26,7 @@ export const events: EventType[] = [
     description: "An event designed to encourage young girls to get involved in STEM and robotics through hands-on activities.",
     image: "/girlpowered2024.jpg",
     size: "onexy",
-    link: "https://drive.google.com/file/d/1wYqUtLeSC6YkUliQq2bnAN3LFdw5OJHF/view?usp=sharing"
+    link: "https://www.robotevents.com/robot-competitions/workshops/RE-WORKSHOP-24-7790.html#general-info"
   },
   {
     title: "Battle of The Bay",
@@ -35,7 +35,6 @@ export const events: EventType[] = [
     description: "Gael Force Robotics' annual VEX Robotics Competition that brings teams from all over the Bay Area!",
     image: "/botb2024.jpg",
     size: "twoxoney",
-    link: "https://drive.google.com/file/d/14lFOpctJCyvZNEiXj2ISfpNsxsyBSJ6p/view?usp=sharing"
   },
   {
     title: "All-Inclusive Workshop",
@@ -44,6 +43,7 @@ export const events: EventType[] = [
     description: "A workshop open to all students that follows the same format as the GirlPowered Workshop.",
     image: "/showcase2024.jpg",
     size: "onexy",
+    link: "https://drive.google.com/file/d/14lFOpctJCyvZNEiXj2ISfpNsxsyBSJ6p/view?usp=sharing",
   },
   {
     title: "Battle of The Bay Skills",
