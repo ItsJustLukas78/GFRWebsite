@@ -31,6 +31,7 @@ export function Footer({ intent, className }: FooterProps) {
         <h1 className="font-light">© 2024. All Rights Reserved.</h1>
         <h1 className="font-light">Content by members of GFR</h1>
         <h1 className="font-light">Developed by Lukas Somwong</h1>
+        <h1 className="font-light">Code licensed under the <a href="/LICENSE.txt" className="text-[#DB4A4A]">MIT License</a></h1>
       </div>
 
       <div className="flex space-x-4">
