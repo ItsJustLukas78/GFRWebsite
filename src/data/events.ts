@@ -35,6 +35,7 @@ export const events: EventType[] = [
     description: "Gael Force Robotics' annual VEX Robotics Competition that brings teams from all over the Bay Area!",
     image: "/botb2024.jpg",
     size: "twoxoney",
+    link: "https://www.robotevents.com/robot-competitions/vex-robotics-competition/RE-V5RC-24-7817.html#general-info"
   },
   {
     title: "All-Inclusive Workshop",

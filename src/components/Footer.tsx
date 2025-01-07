@@ -5,18 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import NextImage from "next/image";
 
-const footer = cva(["flex", "md:h-52", "h-[580px]", "w-full", "mx-auto", "max-w-screen-xl", "flex", "lg:gap-52", "gap-24", "flex-col", "md:flex-row", "mt-20", "mx-10", "xl:mx-auto", "mb-14"], {
-  variants: {
-    intent: {
-      primary: ["text-primary"],
-    }
-  },
-  defaultVariants: {
-    intent: "primary",
-  },
-})
-
-
 export function Footer() {
   return <div className="mx-10" >
     <div className="flex md:h-64 h-[580px] max-w-screen-xl mx-auto lg:gap-52 gap-24 flex-col md:flex-row mt-20 mb-14 text-primary">
