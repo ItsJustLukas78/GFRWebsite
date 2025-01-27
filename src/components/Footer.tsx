@@ -6,6 +6,9 @@ import Link from "next/link";
 import NextImage from "next/image";
 
 export function Footer() {
+
+  const currentYear = new Date().getFullYear()
+
   return <div className="mx-10" >
     <div className="flex md:h-64 h-[580px] max-w-screen-xl mx-auto lg:gap-52 gap-24 flex-col md:flex-row mt-20 mb-14 text-primary">
       <div className="flex flex-col gap-6">
@@ -14,7 +17,7 @@ export function Footer() {
           Gael Force Robotics
         </a>
         <div className="flex flex-col gap-1">
-          <h1 className="font-light">© 2024. All Rights Reserved.</h1>
+          <h1 className="font-light">©{currentYear} All Rights Reserved.</h1>
           <h1 className="font-light">Content by members of GFR</h1>
           <h1 className="font-light">Developed by Lukas Somwong</h1>
           <h1 className="font-light">Code licensed under <a href="/LICENSE.txt" className="text-[#DB4A4A]">MIT</a></h1>

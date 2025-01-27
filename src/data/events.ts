@@ -46,12 +46,12 @@ export const events: EventType[] = [
     size: "onexy",
     link: "https://drive.google.com/file/d/14lFOpctJCyvZNEiXj2ISfpNsxsyBSJ6p/view?usp=sharing",
   },
-  {
-    title: "Battle of The Bay Skills",
-    date: "Feb 22, 2025",
-    location: "Dublin High School",
-    description: "An annual event that provides teams with a last-minute opportunity to earn qualifications for state events or the worlds competition.",
-    image: "/skillsonly.jpg",
-    size: "onexy",
-  },
+  // {
+  //   title: "Battle of The Bay Skills",
+  //   date: "Feb 22, 2025",
+  //   location: "Dublin High School",
+  //   description: "An annual event that provides teams with a last-minute opportunity to earn qualifications for state events or the worlds competition.",
+  //   image: "/skillsonly.jpg",
+  //   size: "onexy",
+  // },
 ];

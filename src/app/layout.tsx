@@ -22,9 +22,11 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({children}: { children: React.ReactNode }) {
+
   return (
     <html lang="en" className="">
     <body>
+
     {/*<div className="absolute top-0 z-[-2] h-screen w-screen bg-[radial-gradient(#ffffff33_1px,#00091d_1px)]">*/}
     {/*</div>*/}
 
@@ -34,9 +36,15 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
     {/*<div className="absolute -z-10 min-h-full w-full bg-black">*/}
     {/*  <div className="absolute bottom-0 left-0 right-0 top-0 h-full w-full bg-[linear-gradient(to_right,#4f4f4f2e_3px,transparent_1px),linear-gradient(to_bottom,#8080800a_2px,transparent_1px)] bg-[size:14px_24px]"></div>*/}
     {/*</div>*/}
+
+    <div className="stick top-0 z-50 bg-red-600/80 text-white font-mono font-semibold text-center py-2 text-lg">
+      <p>Checkout our BOTB <a className="text-blue-300" target="_blank" href="https://www.youtube.com/watch?v=QfP7mpJ-1M8&t=2s">livestream</a> and <a className="text-blue-300" target="_blank" href="https://www.youtube.com/watch?v=z4CdeRLKjXs">promo!</a></p>
+    </div>
+
     <NavBar/>
     {children}
     <Footer/>
+
     </body>
     </html>
   )

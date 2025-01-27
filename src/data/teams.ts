@@ -26,7 +26,7 @@ export const Teams: TeamType[] = [
     teamNumber: "5327K",
     teamName: "Gael Force Kreamers",
     captainName: "Aidan Wang",
-    memberNames: ["Kaito", "Ayush", "William", "Lukas", "David", "Jayden", "Easton", "Landon", "Alicia", "Jay", "Austin", "Sean", "Angela", "Moon", "Jack"],
+    memberNames: ["Kaito", "Ayush", "William", "Lukas", "David", "Jayden", "Easton", "Jay", "Sean", "Moon", "Jack"],
     imageUrl: "/KLogo.png",
   },
   {

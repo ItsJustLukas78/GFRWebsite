@@ -174,15 +174,27 @@ export default function Web() {
                 className="mb-10 max-w-2xl text-xl font-semibold uppercase leading-none tracking-wider text-primary md:text-2xl xl:text-3xl">
               Our Sponsors
             </h1>
-            <Marquee pauseOnHover={true} speed={50} className="mx-auto max-w-screen-xl min-h-36">
-              {/*<img src="/logoboss.png" alt="LogoBoss Logo" width={200} height={200} className="mr-10 hidden md:block"/>*/}
+            <Marquee pauseOnHover={true} autoFill speed={50} className="mx-auto max-w-screen-xl min-h-36">
               <img src="/robosource.png" alt="robosource Logo" width={200} height={200}
                    className="mr-10 hidden md:block"/>
-              {/*<img src="/GFRLogo.png" alt="GFR Logo" width={200} height={200} className="mr-10 hidden md:block"/>*/}
-
-              {/*<img src="/logoboss.png" alt="LogoBoss Logo" width={100} height={100} className="mr-10 block md:hidden"/>*/}
               <img src="/robosource.png" alt="RoboSource Logo" width={100} height={100}
                    className="mr-10 block md:hidden"/>
+
+              <img src="/LLNL.png" alt="LLNL Logo" width={200} height={200}
+                   className="mr-10 hidden md:block"/>
+              <img src="/LLNL.png" alt="LLNL Logo" width={100} height={100}
+                   className="mr-10 block md:hidden"/>
+
+              <img src="/ACSF.png" alt="ACSF Logo" width={200} height={200}
+                   className="mr-10 hidden md:block bg-white"/>
+              <img src="/ACSF.png" alt="ACSF Logo" width={100} height={100}
+                    className="mr-10 block md:hidden bg-white"/>
+
+              <img src="/Qualcomm.png" alt="Qualcomm Logo" width={200} height={200}
+                   className="mr-10 hidden md:block"/>
+              <img src="/Qualcomm.png" alt="Qualcomm Logo" width={100} height={100}
+                    className="mr-10 block md:hidden"/>
+
               {/*<img src="/GFRLogo.png" alt="GFR Logo" width={100} height={100} className="mr-10 block md:hidden"/>*/}
             </Marquee>
           </div>
