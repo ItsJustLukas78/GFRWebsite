@@ -19,7 +19,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  google-site-verification: "liYv6Hv4PYMr_GmWPjuEseXMTgFYijogo7URbZg9o3k"
+  verification: { google: "liYv6Hv4PYMr_GmWPjuEseXMTgFYijogo7URbZg9o3k" },
 }
 
 export default function RootLayout({children}: { children: React.ReactNode }) {
