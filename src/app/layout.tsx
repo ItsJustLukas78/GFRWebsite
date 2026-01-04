@@ -18,7 +18,8 @@ export const metadata: Metadata = {
         height: 3024,
       },
     ],
-  }
+  },
+  verification: { google: "liYv6Hv4PYMr_GmWPjuEseXMTgFYijogo7URbZg9o3k" },
 }
 
 export default function RootLayout({children}: { children: React.ReactNode }) {
